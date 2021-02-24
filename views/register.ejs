@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+    <input type="text" placeholder="nombre de usuario" name="username">
+    <input type="email" placeholder="email" name="email">
+    <input type="password" placeholder="contraseña" name="pass">
+    <input type="password" placeholder="reingrese su contraseña" name="pass2">
+    <input type="file" name="avatar">
+
+    <button type="submit">Registrarse</button>
+</form>
+
+    <% if (typeof errores != 'undefined') { %>
+     <ul>
+         <% errores.forEach(error => { %>
+          <li><%= error.msg  %></li>
+         <% }) %>
+     </ul>
+    <% } %>
+
+</body>
+</html>
